@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noejs Welcome Page</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #eaf5e9;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .background-curve {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: white;
+            clip-path: ellipse(100% 40% at 70% 10%)
+        }
+        .container {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            z-index: 1;
+        }
+        .logo {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .logo img {
+            width: 100%;
+        }
+        .details {
+            margin-top: 20px;
+            font-size: 16px;
+            color: #333;
+        }
+        .details strong {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="background-curve"></div>
+    <div class="container">
+        <div class="logo">
+            <img src="/images/logo.png" alt="Rails Logo">
+        </div>
+        <div class="details">
+            <p><strong>Node version:</strong> <%= version %></p>
+            <p><strong>Operating System:</strong> <%= os %></p>
+        </div>
+    </div>
+</body>
+</html>
