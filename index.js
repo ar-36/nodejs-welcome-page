@@ -10,7 +10,6 @@ app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
 app.get('/', (req, res) => {
-  console.log(process.versions);
   res.render('welcome', {
     version: process.versions.node,
     os: process.platform
